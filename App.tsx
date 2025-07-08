@@ -13,6 +13,7 @@ export default function App() {
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="Login" component={LoginScreen} options={{ headerShown: false }} />
         <Stack.Screen name="SignUp" component={SignUpScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="HomePage" component={require('./components/HomePage').default} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

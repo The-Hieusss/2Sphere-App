@@ -17,32 +17,7 @@ export default function SignUpScreen() {
 
   return (
     <SafeAreaView className="absolute flex h-full w-full flex-col items-center justify-center bg-black text-white">
-      <View
-        style={{
-          position: 'absolute',
-          width: 100,
-          height: 150,
-          backgroundColor: '#6B42C9',
-          borderRadius: 150,
-          top: -50,
-          left: -50,
-          opacity: 0.8,
-          zIndex: 1,
-        }}
-      />
-      <View
-        style={{
-          position: 'absolute',
-          width: 100,
-          height: 150,
-          backgroundColor: '#6B42C9',
-          borderRadius: 150,
-          top: -50,
-          right: -50,
-          opacity: 0.8,
-          zIndex: 1,
-        }}
-      />
+      
       <Image source={require('../assets/logo.png')} style={{ width: 400, height: 185 }} />
       <Text className="mt-6 text-3xl font-bold text-white">Sign Up</Text>
       <Text className="font-inter self-center p-6 text-white">Create your account</Text>
@@ -83,6 +58,8 @@ export default function SignUpScreen() {
         className="h-12 w-4/5 justify-center rounded-lg bg-[#454B60]"
         onPress={() => {
           console.log('Sign Up');
+          // Here you can add the logic to handle sign up, e.g., API call
+          navigation.navigate('HomePage'); // Navigate to HomePage after sign up
         }}>
         <Text className="self-center font-bold text-white">Sign Up</Text>
       </TouchableOpacity>
@@ -114,32 +91,7 @@ export default function SignUpScreen() {
         }}>
         <Text className="font-inter p-6 text-white">Already have an account? Log in</Text>
       </TouchableOpacity>
-      <View
-        style={{
-          position: 'absolute',
-          width: 100,
-          height: 150,
-          backgroundColor: '#6B42C9',
-          borderRadius: 150,
-          bottom: -50,
-          left: -50,
-          opacity: 0.8,
-          zIndex: -1,
-        }}
-      />
-      <View
-        style={{
-          position: 'absolute',
-          width: 100,
-          height: 150,
-          backgroundColor: '#6B42C9',
-          borderRadius: 150,
-          bottom: -50,
-          right: -50,
-          opacity: 0.8,
-          zIndex: -1,
-        }}
-      />
+      
     </SafeAreaView>
   );
 }
